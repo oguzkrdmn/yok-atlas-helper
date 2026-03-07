@@ -1,0 +1,56 @@
+#hareketli-net-kutusu {
+    /* Sayfada sabit kalması için fixed kullanıyoruz */
+    position: fixed;
+    right: 20px; /* Her zaman sağda */
+    width: 140px;
+    background: rgba(15, 23, 42, 0.85); /* Koyu lacivert şeffaf arka plan */
+    backdrop-filter: blur(8px); /* Arkasını bulanıklaştırır */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    z-index: 999999;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    
+    /* Kaçış animasyonunun yumuşak olması için transition */
+    transition: top 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* Metinlerin yanlışlıkla seçilmesini engeller */
+    user-select: none; 
+    cursor: default;
+}
+
+.net-baslik {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+    color: #e2e8f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.net-satir {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.net-satir span {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.tyt-renk {
+    color: #38bdf8; /* TYT için açık mavi */
+    font-size: 18px;
+}
+
+.ayt-renk {
+    color: #4ade80; /* AYT için yeşil */
+    font-size: 18px;
+}
