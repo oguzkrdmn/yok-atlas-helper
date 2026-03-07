@@ -1,12 +1,6 @@
 # 🎯 YÖK Atlas Helper
 
-Bu Chrome eklentisi, YÖK Atlas üzerindeki üniversite bölümlerine yerleşenlerin net verilerini otomatik olarak çeker ve ekranın sağ tarafında şık, hareketli bir kutuda özetler.
-
-## 🚀 Özellikler
-- **Otomatik Veri Çekme:** Sayfa açıldığında "Net Ortalamaları" butonuna sizin yerinize tıklar ve veriyi çeker.
-- **Dinamik Kutu:** Fareyle üzerine gelindiğinde kaçan, kullanıcıyı rahatsız etmeyen modern tasarım.
-- **Koyu Tema Desteği:** Glassmorphism tasarımıyla YÖK Atlas arayüzüne uyum sağlar.
-- **2 ve 4 Yıllık Desteği:** Hem TYT hem de AYT netlerini otomatik algılar.
+Bu Chrome eklentisi, YÖK Atlas üzerindeki üniversite bölümlerine yerleşenlerin net verilerini bir kutuda özetler. Bölümün sayfasına girmeniz gerekmektedir.
 
 ## 🛠 Kurulum Talimatları
 1. Bu depoyu (repository) sağ üstteki **Code** butonuna basıp **Download ZIP** diyerek indirin.
