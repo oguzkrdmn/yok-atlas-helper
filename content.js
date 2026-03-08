@@ -78,7 +78,7 @@ function netleriToplaVeGoster() {
         }
     });
 
-    kutuOlustur(tytNet.toFixed(1), aytVarMi ? aytNet.toFixed(1) : null);
+    kutuOlustur(tytNet.toFixed(2), aytVarMi ? aytNet.toFixed(2) : null);
     sonKisininNetleriniCek();
 }
 
@@ -243,23 +243,34 @@ function sonKisininNetleriniCek() {
             // Puan türü DİL ise AYT → YDT, Mat → Dil olarak sadece isim değiştir
             const puanTuruEl = document.querySelector("body > div.row > div:nth-child(1) > div.panel.panel-primary > div > h3");
             console.log('[YÖK Helper] Puan türü elementi:', puanTuruEl ? `"${puanTuruEl.innerText.trim()}"` : 'BULUNAMADI');
+
             const dilMi = puanTuruEl && puanTuruEl.innerText.includes('DİL');
             console.log('[YÖK Helper] DİL mi?', dilMi);
             if (dilMi && 'Mat' in aytDetay) {
                 aytDetay['Dil'] = aytDetay['Mat'];
                 delete aytDetay['Mat'];
             }
+
+            // EA puan türü ise Fizik→Edebiyat, Kimya→Tarih, Biyoloji→Coğrafya
+            const eaMi = puanTuruEl && puanTuruEl.innerText.includes('EA');
+            console.log('[YÖK Helper] EA mı?', eaMi);
+            if (eaMi) {
+                if ('Fizik'    in aytDetay) { aytDetay['Edebiyat'] = aytDetay['Fizik'];    delete aytDetay['Fizik']; }
+                if ('Kimya'    in aytDetay) { aytDetay['Tarih']    = aytDetay['Kimya'];    delete aytDetay['Kimya']; }
+                if ('Biyoloji' in aytDetay) { aytDetay['Coğrafya'] = aytDetay['Biyoloji']; delete aytDetay['Biyoloji']; }
+            }
+
             console.log('[YÖK Helper] aytDetay (son hali):', aytDetay);
 
             console.log('[YÖK Helper] TYT detay:', tytDetay, '→', tytToplam);
             console.log('[YÖK Helper] AYT detay:', aytDetay, '→', aytToplam);
 
-            sonKisiniKutuya(tytToplam.toFixed(1), aytToplam !== null ? aytToplam.toFixed(1) : null, tytDetay, aytDetay, dilMi);
+            sonKisiniKutuya(tytToplam.toFixed(2), aytToplam !== null ? aytToplam.toFixed(2) : null, tytDetay, aytDetay, dilMi, eaMi);
         })
         .catch(err => console.log('[YÖK Helper] Fetch HATA:', err));
 }
 
-function sonKisiniKutuya(tyt, ayt, tytDetay, aytDetay, dilMi) {
+function sonKisiniKutuya(tyt, ayt, tytDetay, aytDetay, dilMi, eaMi) {
     const kutu = document.getElementById('hareketli-net-kutusu');
     if (!kutu) {
         console.log('[YÖK Helper] HATA: Kutu bulunamadı!');
@@ -308,7 +319,7 @@ function sonKisiniKutuya(tyt, ayt, tytDetay, aytDetay, dilMi) {
 
         const aytSatir = document.createElement('div');
         aytSatir.className = 'net-satir net-satir-tiklanabilir';
-        aytSatir.innerHTML = `<span>${dilMi ? 'YDT' : 'AYT'} <span class="ok-ikon">▾</span></span> <strong class="ayt-renk-son">${ayt}</strong>`;
+        aytSatir.innerHTML = `<span>${dilMi ? 'YDT' : eaMi ? 'AYT-EA' : 'AYT'} <span class="ok-ikon">▾</span></span> <strong class="ayt-renk-son">${ayt}</strong>`;
         aytWrapper.appendChild(aytSatir);
 
         const aytDetayDiv = document.createElement('div');
