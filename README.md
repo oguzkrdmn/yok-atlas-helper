@@ -50,7 +50,7 @@ O programa **2025 yılında en son yerleşen kişinin** ders ders net ortalamala
 ### 🏫 Lisans & Önlisans Desteği
 Hem **4 yıllık lisans** hem de **2 yıllık önlisans** programlarında çalışır.
 
-### 📂 Tıklanabilir Detay Açılır Paneli
+### 📂 Tıklanabilir Açılır Panel
 Son yerleşen kişinin TYT ve AYT/YDT toplam netlerine tıklayınca ders bazlı breakdown açılır. Tekrar tıklayınca kapanır.
 
 ---
