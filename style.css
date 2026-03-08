@@ -1,10 +1,9 @@
 #hareketli-net-kutusu {
-    /* Sayfada sabit kalması için fixed kullanıyoruz */
     position: fixed;
-    right: 20px; /* Her zaman sağda */
-    width: 140px;
-    background: rgba(15, 23, 42, 0.85); /* Koyu lacivert şeffaf arka plan */
-    backdrop-filter: blur(8px); /* Arkasını bulanıklaştırır */
+    right: 20px;
+    width: 160px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: #f8fafc;
     padding: 15px;
@@ -12,13 +11,13 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     z-index: 999999;
     font-family: 'Segoe UI', system-ui, sans-serif;
-    
-    /* Kaçış animasyonunun yumuşak olması için transition */
     transition: top 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
-    /* Metinlerin yanlışlıkla seçilmesini engeller */
-    user-select: none; 
-    cursor: default;
+    user-select: none;
+    cursor: grab;
+}
+
+#hareketli-net-kutusu:active {
+    cursor: grabbing;
 }
 
 .net-baslik {
@@ -46,11 +45,79 @@
 }
 
 .tyt-renk {
-    color: #38bdf8; /* TYT için açık mavi */
+    color: #38bdf8;
     font-size: 18px;
 }
 
 .ayt-renk {
-    color: #4ade80; /* AYT için yeşil */
+    color: #4ade80;
     font-size: 18px;
+}
+
+/* ─── Son Kişi bölümü ──────────────────────── */
+.net-ayrac {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 12px 0 8px;
+}
+
+.son-kisi-baslik {
+    font-size: 12px;
+    color: #cbd5e1;
+    margin-bottom: 4px;
+}
+
+.tyt-renk-son {
+    color: #7dd3fc;
+    font-size: 18px;
+}
+
+.ayt-renk-son {
+    color: #86efac;
+    font-size: 18px;
+}
+
+/* Tıklanabilir toplam satırı */
+.net-satir-tiklanabilir {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 2px 4px;
+    margin-left: -4px;
+    margin-right: -4px;
+    transition: background 0.15s;
+}
+
+.net-satir-tiklanabilir:hover {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.ok-ikon {
+    font-size: 10px;
+    color: #64748b;
+    margin-left: 2px;
+}
+
+/* Detay satırları — varsayılan kapalı */
+.net-detay-icerik {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+}
+
+.net-detay-icerik.acik {
+    max-height: 200px;
+}
+
+.net-detay-satir {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #94a3b8;
+    padding: 2px 4px;
+    border-left: 2px solid rgba(255, 255, 255, 0.08);
+    margin-top: 3px;
+}
+
+.net-detay-satir span:last-child {
+    color: #cbd5e1;
+    font-weight: 500;
 }
