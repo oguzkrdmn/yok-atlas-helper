@@ -4,24 +4,6 @@ YÖK Atlas'ta bölüm sayfalarını incelerken hedef net toplamlarını ve o bö
 
 ---
 
-## ✨ Özellikler
-
-### 📊 Hedef Net Toplamları
-Bölüm sayfasına girdiğinizde, o programa yerleşmek için gereken **TYT ve AYT net ortalamalarını** otomatik olarak hesaplayıp gösterir.
-
-### 👤 Son Yerleşen Kişinin Netleri
-O programa **2025 yılında en son yerleşen kişinin** ders ders net ortalamalarını getirir.
-
-- **TYT:** Türkçe, Sosyal, Matematik, Fen
-- **AYT:** Matematik, Fizik, Kimya, Biyoloji
-- **YDT (Dil bölümleri):** Tüm Diller
-
-### 🏫 Lisans & Önlisans Desteği
-Hem **4 yıllık lisans** hem de **2 yıllık önlisans** programlarında çalışır.
-
-### 📂 Tıklanabilir Detay Açılır Paneli
-Son yerleşen kişinin TYT ve AYT/YDT toplam netlerine tıklayınca ders bazlı breakdown açılır. Tekrar tıklayınca kapanır.
-
 ## 🚀 Kurulum
 
 1. Eklentiyi Chrome'a eklemek sadece 1 dakikanızı alır:
@@ -48,6 +30,28 @@ Bitti! Artık YÖK Atlas'ta bir bölüme girdiğinizde sihirbaz sağ tarafta bel
 ├── style.css         # Kutu tasarımı
 └── icon.png          # Eklenti ikonu
 ```
+
+---
+
+---
+
+## ✨ Özellikler
+
+### 📊 Hedef Net Toplamları
+Bölüm sayfasına girdiğinizde, o programa yerleşmek için gereken **TYT ve AYT net ortalamalarını** otomatik olarak hesaplayıp gösterir.
+
+### 👤 Son Yerleşen Kişinin Netleri
+O programa **2025 yılında en son yerleşen kişinin** ders ders net ortalamalarını getirir.
+
+- **TYT:** Türkçe, Sosyal, Matematik, Fen
+- **AYT:** Matematik, Fizik, Kimya, Biyoloji
+- **YDT (Dil bölümleri):** Tüm Diller
+
+### 🏫 Lisans & Önlisans Desteği
+Hem **4 yıllık lisans** hem de **2 yıllık önlisans** programlarında çalışır.
+
+### 📂 Tıklanabilir Detay Açılır Paneli
+Son yerleşen kişinin TYT ve AYT/YDT toplam netlerine tıklayınca ders bazlı breakdown açılır. Tekrar tıklayınca kapanır.
 
 ---
 
