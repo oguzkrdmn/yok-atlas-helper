@@ -1,6 +1,7 @@
 # 🎯 YÖK Atlas Helper
 
 YÖK Atlas'ta bölüm sayfalarını incelerken hedef net toplamlarını ve o bölüme **en son yerleşen kişinin** ders bazlı net ortalamalarını ekranın kenarında küçük, şık bir kutu içinde gösteren Chrome eklentisi.
+# Sözel alanı için destek yoktur.
 
 ---
 
@@ -44,7 +45,7 @@ Bölüm sayfasına girdiğinizde, o programa yerleşmek için gereken **TYT ve A
 O programa **2025 yılında en son yerleşen kişinin** ders ders net ortalamalarını getirir.
 
 - **TYT:** Türkçe, Sosyal, Matematik, Fen
-- **AYT:** Matematik, Fizik, Kimya, Biyoloji
+- **AYT:** Matematik, Fizik, Kimya, Biyoloji, Edebiyat, Tarih, Coğrafya
 - **YDT (Dil bölümleri):** Tüm Diller
 
 ### 🏫 Lisans & Önlisans Desteği
