@@ -1,4 +1,4 @@
-# 🎯 YÖK Atlas Helper
+# 🎯 YÖK Atlas Helper. YÖKATLAS YENİLENDİĞİNDEN DOLAYI EKLENTİ ARTIK ÇALIŞMIYOR.
 
 YÖK Atlas'ta bölüm sayfalarını incelerken hedef net toplamlarını ve o bölüme **en son yerleşen kişinin** ders bazlı net ortalamalarını ekranın kenarında küçük, şık bir kutu içinde gösteren Chrome eklentisi. AI'den destek alınmıştır.
 # Sözel alanı için destek yoktur.
